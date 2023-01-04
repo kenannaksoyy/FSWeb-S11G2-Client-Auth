@@ -26,8 +26,10 @@ export default function AddFriend() {
             console.log(res.status);
             if(res.status===200) history.push("/friendlist");
             
-          })
-          .catch((error) => console.log(error.res.data.error));
+            })
+          .catch(err => {
+            console.log(err.message)
+            })
       };
 
     return (
